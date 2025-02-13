@@ -1,17 +1,12 @@
-# controller Interactive Fiction
- 
-# Interactive Fiction Controller Interface
+# Interactive Fiction/Text Adventure Game Controller
 
-## Description
 
-This project provides a Python-based interface for controlling interactive fiction games using a game controller. It leverages the `pygame` library to handle joystick input and the `pyautogui` library to simulate keyboard inputs, allowing players to interact with text-based games seamlessly.
+This project simulates typing commands when pressing buttons on your game controller, for navigating Interactive Fiction games. It is configured to enter the most common Infocom game commands.  It uses Python 3, the `pygame` library to read controller input and the `pyautogui` library to simulate keyboard inputs.
 
 ## Features
 
-- **Controller Support**: Connects to various game controllers and maps buttons to common interactive fiction commands.
-- **Customizable Controls**: Supports D-Pad navigation, button mappings for actions like LOOK, WAIT, HELP, and more.
-- **Touchpad Integration**: Maps the touchpad click to the spacebar for quick interactions.
-- **Real-time Input Handling**: Processes joystick inputs in real-time, allowing for smooth gameplay.
+- **Controller Support**: Only tested with SONY DUALSENSE controller on macOS 14. Should work with others, but will probably require remap in code.
+- **Customizable Controls**: Supports D-Pad navigation, button mappings for actions like LOOK, WAIT, HELP, and more.  (customizable in code)
 
 ## Controls Mapping
 
@@ -52,18 +47,16 @@ This project provides a Python-based interface for controlling interactive ficti
    pip install pygame pyautogui
    ```
 
-3. Connect your game controller and run the script:
+3. Connect your game controller to your computer and run the script:
    ```bash
    python controllerIF.py
    ```
 
 ## Usage
+First run, on macOS - a dialog box will appear that asks for system permissions for Accessibility for Terminal.  This has to be granted to use the controller as text command input.  Not sure what happens for other OSes.
 
-Once the script is running, you can use your game controller to navigate and interact with your interactive fiction game. The mappings are designed to provide a natural and intuitive experience for players.
+Once the script is running in terminal, the terminal window will display button mapping.  Change apps to your interactive fiction window.  Tapping controller buttons will type the IF commands + return IN ALL APPS as if it were a keyboard. 
 
-## Contributing
-
-Contributions are welcome! If you have suggestions for improvements or additional features, feel free to open an issue or submit a pull request.
 
 ## License
 
